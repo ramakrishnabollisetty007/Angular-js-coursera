@@ -21,10 +21,12 @@
       {
         $scope.msg="Too Much";
         $scope.getStyle($scope.msg);
+        $scope.getBorderStyle($scope.msg);
       }
       else {
         $scope.msg="enjoy!";
         $scope.getStyle($scope.msg);
+        $scope.getBorderStyle($scope.msg);
       }
 
     }
