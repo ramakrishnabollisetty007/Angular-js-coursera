@@ -6,11 +6,12 @@
   function LunchCheckController($scope) {
     $scope.items="";
 
-    $scope.splitChecker=function () {
+    $scope.btnOnClick=function () {
     if(!$scope.items)
     {
       $scope.msg="Please enter data first";
       $scope.getStyle($scope.msg);
+      $scope.getBorderStyle($scope.msg);
 
     }else{
       var itemValues=$scope.items;
@@ -23,7 +24,7 @@
       }
       else {
         $scope.msg="enjoy!";
-$scope.getStyle($scope.msg);
+        $scope.getStyle($scope.msg);
       }
 
     }
@@ -40,6 +41,18 @@ $scope.getStyle($scope.msg);
         return {'color':'red'};
       }
     };
+
+    $scope.getBorderStyle=function (msg) {
+      if(msg=="enjoy!"){
+      return {'border-color':'green'};
+    }else if(msg=="Too Much")
+    {
+        return {'border-color':'green'};
+      }else if(msg=="Please enter data first") {
+        return {'border-color':'red'};
+      }
+    };
+
 
   };
 
