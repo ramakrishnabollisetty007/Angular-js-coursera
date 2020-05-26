@@ -6,7 +6,7 @@
   function LunchCheckController($scope) {
     $scope.items="";
 
-    $scope.btnOnClick=function () {
+    $scope.lunchChecker=function () {
     if(!$scope.items)
     {
       $scope.msg="Please enter data first";
